@@ -13,13 +13,31 @@
     />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
   </head>
-  <body class="container mx-auto px-6 py-4">
-  
-      <header class="">  </header>
-      
-      <section class="">
-        <div class="flex">{% block content %} {% endblock content %}</div>
-      </section>
-  
+  <body class="container mx-auto px-6 py-4 bg-slate-100">
+    <header class="bg-slate-600 p-16 my-3 z-0">
+      <a href="/">
+        <h1 class="font-mono text-2xl text-center font-bold center">
+          withonlyamap
+        </h1>
+      </a>
+    </header>
+
+    <section>
+      <div class="grid grid-cols-1 md:grid-cols-2 md:gap-6">
+        {% block content %} {% endblock content %}
+      </div>
+    </section>
+
+    <footer class="bg-gray-200 text-center lg:text-left mt-3">
+      <div
+        class="text-gray-700 text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+        © 2021 Copyright:
+        <a class="text-gray-800" href="https://tailwind-elements.com/">
+          Tailwind Elements
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
