@@ -7,16 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Withonlyamap blog</title>
     {% tailwind_css %}
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
   </head>
-  <body class="container mx-auto px-6 py-4 bg-slate-100">
-    <header class="bg-slate-600 p-16 my-3 z-0">
+  <body class="container font-body mx-auto px-6 py-4">
+  <nav class=""> 
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+        </ul>
+      </nav>
+    <header class="bg-slate-300 p-16 my-3 z-0">
       <a href="/">
-        <h1 class="font-mono text-2xl text-center font-bold center">
+        <h1 class="text-2xl text-center font-bold center">
           withonlyamap
         </h1>
       </a>
@@ -28,7 +33,7 @@
       </div>
     </section>
 
-    <footer class="text-center lg:text-left mt-3">
+    <footer class="text-center lg:text-left mt-12">
       <div
         class="text-gray-700 text-center p-4">
         © 2022

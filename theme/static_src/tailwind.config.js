@@ -39,13 +39,12 @@ module.exports = {
          * Python: If you use Tailwind CSS classes in Python, uncomment the following line
          * and make sure the pattern below matches your project structure.
          */
-        // '../../**/*.py'
+        '../../**/*.py'
     ],
     theme: {
         fontFamily: {
-            sans: ['Nunito', 'sans-serif'],
-            display: ['Nunito', 'sans-serif'],
-            body: ['Nunito', 'sans-serif'],
+            'sans': ['ui-sans-serif', 'system-ui'],
+            'body': ['Joan', 'Georgia', 'sans-serif'],
             },
         extend: {
             colors: {
