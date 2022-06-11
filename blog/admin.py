@@ -2,4 +2,7 @@ from django.contrib import admin
 from .models import Post
 # Register your models here.
 
-admin.site.register(Post)
+# admin.site.register(Post)
+@admin.register(Post)
+class CustomerAdmin(admin.ModelAdmin):
+    list_display = ("id", "title", "created_on", "author",)

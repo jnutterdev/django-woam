@@ -11,10 +11,12 @@ class Post(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
+    list_display = ("created_on")
 
     def __str__(self):
         return self.title
-        return self.created_on
+        return f"{self.created_on}"
 
     def get_absolute_url(self):
         return reverse("post_detail", kwargs={"pk": self.pk})
+
