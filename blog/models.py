@@ -9,13 +9,16 @@ class Post(models.Model):
         on_delete=models.CASCADE,
     )
     body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
+    created_on = models.DateTimeField(auto_now_add=False)
     updated_on = models.DateTimeField(auto_now=True)
-    list_display = ("created_on")
+  
+    class Meta():
+        ordering = ["-created_on"]
+
 
     def __str__(self):
         return self.title
-        return f"{self.created_on}"
+        return self.created_on
 
     def get_absolute_url(self):
         return reverse("post_detail", kwargs={"pk": self.pk})
