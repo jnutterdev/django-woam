@@ -12,13 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
 
-     <script src="{% static 'htmx.min.js' %}" defer></script>
+     <script src="{% static 'js/htmx.min.js' %}" defer></script>
   </head>
   <body class="container font-body mx-auto px-6 py-4">
   <nav class=""> 
         <ul>
-          <li>Home</li>
-          <li>About</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
         </ul>
       </nav>
     <header class="bg-slate-300 p-16 my-3 z-0">
@@ -32,6 +32,7 @@
     <section>
       <div class="grid grid-cols-1 md:grid-cols-2 md:gap-6">
         {% block content %} {% endblock content %}
+         {% block about %} {% endblock about %}
       </div>
     </section>
 
