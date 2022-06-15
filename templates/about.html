@@ -1,14 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block about %}
+{% block content %}
    
-<div id="color-demo" class="smooth" style="color:red"
-hx-get="/colors" hx-swap="outerHTML" hx-trigger="every 1s">
-Color swap demo
-</div>
+    <h1>About</h1>
 
-
-
-
-{% endblock about %}
+{% endblock content %}

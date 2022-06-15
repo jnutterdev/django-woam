@@ -1,21 +1,8 @@
-{% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Withonlyamap blog</title>
-    {% tailwind_css %}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-
-     <script src="{% static 'js/htmx.min.js' %}" defer></script>
-  </head>
+  {% include 'includes/_head.html' %}
   <body class="container font-body mx-auto px-6 py-4">
-  {% include 'partials/_nav.html' %}
+    {% include 'includes/_nav.html' %}
     <header class="bg-slate-300 p-16 my-3 z-0">
       <a href="/">
         <h1 class="text-2xl text-center font-bold center">
@@ -27,18 +14,8 @@
     <section>
       <div class="grid grid-cols-1 md:grid-cols-2 md:gap-6">
         {% block content %} {% endblock content %}
-         {% block about %} {% endblock about %}
       </div>
     </section>
-
-    <footer class="text-center lg:text-left mt-12">
-      <div
-        class="text-gray-700 text-center p-4">
-        © 2022
-        <a class="text-gray-800" href="#">
-          jnutterdev
-        </a>
-      </div>
-    </footer>
+    {% include 'includes/_footer.html' %}
   </body>
 </html>
