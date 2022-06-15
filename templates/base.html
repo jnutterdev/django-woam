@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include 'includes/_head.html' %}
+  
+  {% include 'includes/head.html' %}
+  
   <body class="container font-body mx-auto px-6 py-4">
-    {% include 'includes/_nav.html' %}
+    
+    {% include 'includes/nav.html' %}
+
     <header class="bg-slate-300 p-16 my-3 z-0">
       <a href="/">
         <h1 class="text-2xl text-center font-bold center">
@@ -16,6 +20,8 @@
         {% block content %} {% endblock content %}
       </div>
     </section>
-    {% include 'includes/_footer.html' %}
+
+    {% include 'includes/footer.html' %}
+  
   </body>
 </html>
