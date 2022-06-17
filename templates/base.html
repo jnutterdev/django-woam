@@ -3,22 +3,16 @@
   
   {% include 'includes/head.html' %}
   
-  <body class="container font-body mx-auto px-6 py-4">
+  <body class="container font-body mx-auto px-6 py-4 ">
     
     {% include 'includes/nav.html' %}
 
-    <header class="bg-slate-300 p-16 my-3 z-0">
-      <a href="/">
-        <h1 class="text-2xl text-center font-bold center">
-          withonlyamap
-        </h1>
-      </a>
-    </header>
+  {% include 'includes/hero.html' %}
 
-    <section>
-      <div class="grid grid-cols-1 md:grid-cols-2 md:gap-6">
-        {% block content %} {% endblock content %}
-      </div>
+    <section class="">
+      
+      {% block content %} {% endblock content %}
+      
     </section>
 
     {% include 'includes/footer.html' %}
