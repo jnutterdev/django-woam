@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django_htmx',
     'tailwind',
     'theme',
+    'taggit',
 ]
 
 TAILWIND_APP_NAME = 'theme'

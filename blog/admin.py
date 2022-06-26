@@ -5,4 +5,4 @@ from .models import Post
 # admin.site.register(Post)
 @admin.register(Post)
 class CustomerAdmin(admin.ModelAdmin):
-    list_display = ("id", "title", "created_on",)
+    list_display = ("id", "title", "created_on", "tags", )
