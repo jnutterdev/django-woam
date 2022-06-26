@@ -1,6 +1,4 @@
-Django site using Tailwind and HTMX
-
-When installing, run: 
+# Django site using Tailwind and HTMX
 
 To get started, create python virtualenv, ex:
 `pip install pipenv` (if not already installed)
@@ -12,6 +10,9 @@ Create a .env file for storing the Django secret key:
 
 You can also use the following script to generate a new secret key: 
 `./generate_secret.py`
+
+Generate a user for Django: 
+`./manage.py createsuperuser`
 
 Install django-tailwind:
 `./manage.py tailwind install`
