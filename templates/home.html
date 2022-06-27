@@ -1,32 +1,33 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-<div class="grid grid-cols-1 md:grid-cols-2 md:gap-6">
+
+<section class="text-gray-600 body-font overflow-hidden">
 {% for post in post_list %}
-    <div class="post-entry bg-slate-300 my-3 p-6 ">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="-my-8 divide-y-2 divide-gray-100">
+          <div class="py-8 flex flex-wrap md:flex-nowrap">
+            <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+              <span class="font-semibold title-font text-gray-700">
 
-        <h2 class="hover:underline"><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
-        <p class="text-sm font-normal">{{ post.body|truncatewords:20 }}</p>
+              </span>
+              <span class="mt-1 text-gray-500 text-sm">{{ post.created_on|date:'M d, Y' }}</span>
+            </div>
+            <div class="md:flex-grow">
+              <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
+                <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+              </h2>
+              <p class="leading-relaxed">
+                {{ post.body|truncatewords:80 }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
 
-    </div>
-{% endfor %}
-    <div class="pagination mt-6">
-    <span class="step-links">
-        {% if page_obj.has_previous %}
-            <a href="?page=1">&laquo; first</a>
-            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-        {% endif %}
-
-        <span class="current">
-            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-        </span>
-
-        {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">next</a>
-            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-        {% endif %}
-    </span>
-    </div>
-
-</div>
 {% endblock content %}
+
+ {% include 'partials/pagination.html' %}

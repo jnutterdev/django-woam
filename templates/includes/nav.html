@@ -1,9 +1,12 @@
-<div class="w-full text-gray-200 mb-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-    <div class="flex-1 flex justify-center  text-slate-300 p-6">
-        <a href="{% url 'home' %}" class="text-lg no-underline text-grey-darkest hover:text-blue-dark mx-6 ">Home</a>
-         <a href="{% url 'about' %}" class="text-lg no-underline text-grey-darkest hover:text-blue-dark mx-6">About</a>
-    </div>
-</div>
+  <nav class="bg-white shadow dark:bg-gray-800">
+        <div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300">
+            <a href="{% url 'home' %}" class="text-gray-800 transition-colors duration-200 transform dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6">home</a>
+            <a href="{% url 'about' %}" class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">about</a>
+        </div>
+    </nav>
+               
+                
+
 
 
 

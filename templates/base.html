@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  
   {% include 'includes/head.html' %}
-  
-  <body class="container font-body mx-auto px-6 py-4 ">
-    
+
+  <body class="mx-auto">
+
     {% include 'includes/nav.html' %}
 
-  {% include 'includes/hero.html' %}
-
-    <section class="">
-      
-      {% block content %} {% endblock content %}
-      
-    </section>
+    {% block content %} {% endblock content %}
 
     {% include 'includes/footer.html' %}
-  
+
   </body>
 </html>
